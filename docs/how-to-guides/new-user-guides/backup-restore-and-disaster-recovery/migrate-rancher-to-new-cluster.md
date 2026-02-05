@@ -50,7 +50,7 @@ Install the [`rancher-backup chart`](https://github.com/rancher/backup-restore-o
 
    :::note
 
-   The above assumes an environment with outbound connectivity to Docker Hub and to charts.rancher.io.
+   The above assumes an environment with outbound connectivity to Docker Hub.
 
    For an **air-gapped environment**, use the following Helm values to pull the `backup-restore-operator` and `kubectl` images from your private registry when you install the rancher-backup Helm chart.
 
