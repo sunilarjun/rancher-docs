@@ -14,56 +14,57 @@ kind: AdmissionConfiguration
 plugins:
   - name: PodSecurity
     configuration:
-      apiVersion: pod-security.admission.config.k8s.io/v1
+      apiVersion: pod-security.admission.config.k8s.io/v1beta1
       kind: PodSecurityConfiguration
       defaults:
-        enforce: "restricted"
-        enforce-version: "latest"
-        audit: "restricted"
-        audit-version: "latest"
-        warn: "restricted"
-        warn-version: "latest"
+        enforce: restricted
+        enforce-version: latest
       exemptions:
-        usernames: []
+        namespaces:
+        - calico-apiserver
+        - calico-system
+        - cattle-alerting
+        - cattle-capi-system
+        - cattle-csp-adapter-system
+        - cattle-elemental-system
+        - cattle-epinio-system
+        - cattle-externalip-system
+        - cattle-fleet-local-system
+        - cattle-fleet-system
+        - cattle-gatekeeper-system
+        - cattle-global-data
+        - cattle-global-nt
+        - cattle-impersonation-system
+        - cattle-istio
+        - cattle-istio-system
+        - cattle-logging
+        - cattle-logging-system
+        - cattle-monitoring-system
+        - cattle-neuvector-system
+        - cattle-prometheus
+        - cattle-provisioning-capi-system
+        - cattle-resources-system
+        - cattle-sriov-system
+        - cattle-system
+        - cattle-turtles-system
+        - cattle-ui-plugin-system
+        - cattle-windows-gmsa-system
+        - cert-manager
+        - cis-operator-system
+        - compliance-operator-system
+        - fleet-default
+        - fleet-local
+        - ingress-nginx
+        - istio-system
+        - kube-node-lease
+        - kube-public
+        - kube-system
+        - longhorn-system
+        - rancher-alerting-drivers
+        - rancher-compliance-system
+        - security-scan
+        - sr-operator-system
+        - tigera-operator
         runtimeClasses: []
-        namespaces: [calico-apiserver,
-                     calico-system,
-                     cattle-alerting,
-                     cattle-csp-adapter-system,
-                     cattle-elemental-system,
-                     cattle-epinio-system,
-                     cattle-externalip-system,
-                     cattle-fleet-local-system,
-                     cattle-fleet-system,
-                     cattle-gatekeeper-system,
-                     cattle-global-data,
-                     cattle-global-nt,
-                     cattle-impersonation-system,
-                     cattle-istio,
-                     cattle-istio-system,
-                     cattle-logging,
-                     cattle-logging-system,
-                     cattle-monitoring-system,
-                     cattle-neuvector-system,
-                     cattle-prometheus,
-                     cattle-provisioning-capi-system,
-                     cattle-resources-system,
-                     cattle-sriov-system,
-                     cattle-system,
-                     cattle-ui-plugin-system,
-                     cattle-windows-gmsa-system,
-                     cert-manager,
-                     cis-operator-system,
-                     fleet-default,
-                     fleet-local,
-                     ingress-nginx,
-                     istio-system,
-                     kube-node-lease,
-                     kube-public,
-                     kube-system,
-                     longhorn-system,
-                     rancher-alerting-drivers,
-                     security-scan,
-                     sr-operator-system,
-                     tigera-operator]
+        usernames: []
 ```

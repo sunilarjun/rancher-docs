@@ -91,6 +91,7 @@ When you run Rancher on a Kubernetes cluster that enforces a restrictive securit
 - `calico-apiserver`
 - `calico-system`
 - `cattle-alerting`
+- `cattle-capi-system`
 - `cattle-csp-adapter-system`
 - `cattle-elemental-system`
 - `cattle-epinio-system`
@@ -112,10 +113,12 @@ When you run Rancher on a Kubernetes cluster that enforces a restrictive securit
 - `cattle-resources-system`
 - `cattle-sriov-system`
 - `cattle-system`
+- `cattle-turtles-system`
 - `cattle-ui-plugin-system`
 - `cattle-windows-gmsa-system`
 - `cert-manager`
 - `cis-operator-system`
+- `compliance-operator-system`
 - `fleet-default`
 - `fleet-local`
 - `ingress-nginx`
@@ -125,6 +128,7 @@ When you run Rancher on a Kubernetes cluster that enforces a restrictive securit
 - `kube-system`
 - `longhorn-system`
 - `rancher-alerting-drivers`
+- `rancher-compliance-system`
 - `security-scan`
 - `sr-operator-system`
 - `tigera-operator`
