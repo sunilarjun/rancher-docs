@@ -14,11 +14,15 @@ kind: AdmissionConfiguration
 plugins:
   - name: PodSecurity
     configuration:
-      apiVersion: pod-security.admission.config.k8s.io/v1beta1
+      apiVersion: pod-security.admission.config.k8s.io/v1
       kind: PodSecurityConfiguration
       defaults:
-        enforce: restricted
-        enforce-version: latest
+        enforce: "restricted"
+        enforce-version: "latest"
+        audit: "restricted"
+        audit-version: "latest"
+        warn: "restricted"
+        warn-version: "latest"
       exemptions:
         namespaces:
         - calico-apiserver
