@@ -54,7 +54,6 @@ plugins:
         - compliance-operator-system
         - fleet-default
         - fleet-local
-        - ingress-nginx
         - istio-system
         - kube-node-lease
         - kube-public
@@ -65,6 +64,7 @@ plugins:
         - security-scan
         - sr-operator-system
         - tigera-operator
+        - traefik
         runtimeClasses: []
         usernames: []
 ```

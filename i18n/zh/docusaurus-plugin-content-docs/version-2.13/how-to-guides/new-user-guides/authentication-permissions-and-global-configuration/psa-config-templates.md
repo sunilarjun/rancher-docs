@@ -120,7 +120,6 @@ The policies shipped by default in Rancher aim to provide a trade-off between se
 - `compliance-operator-system`
 - `fleet-default`
 - `fleet-local`
-- `ingress-nginx`
 - `istio-system`
 - `kube-node-lease`
 - `kube-public`
@@ -131,6 +130,7 @@ The policies shipped by default in Rancher aim to provide a trade-off between se
 - `security-scan`
 - `sr-operator-system`
 - `tigera-operator`
+- `traefik`
 
 Rancher、Rancher 拥有的一些 Chart 以及 RKE2 和 K3s 发行版都使用这些命名空间。列出的命名空间的一个子集已经在内置的 Rancher `rancher-restricted` 策略中被豁免，用于下游集群。有关运行 Rancher 所需的所有豁免的完整模板，请参阅此[准入配置示例](../../../reference-guides/rancher-security/psa-restricted-exemptions.md)。
 
